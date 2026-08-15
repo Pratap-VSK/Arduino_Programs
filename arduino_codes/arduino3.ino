@@ -126,3 +126,15 @@ void loop(){
 
 // QUESTION: Write a program in arduino to interface a temprature sensor(LM35) to detect the temprature of a room/..
 
+int lmpin = A0;
+
+void setup(){
+    Serial.begin(9600);
+}
+
+void loop(){
+    int reading=ananlogRead(lmpin);
+    float voltage=reading*4.88;
+
+    float temp
+}
