@@ -107,7 +107,7 @@ void loop(){
     digitalWrite(green, LOW);
     delay(2000);
 
-    digitalWrite(red, LOW);
+    ll(red, LOW);
     digitalWrite(yellow, LOW);
     digitalWrite(green, HIGH);
     delay(3000);
