@@ -104,3 +104,25 @@ void loop(){
     digitalWrite(blueled, digitalRead(bbtn));
     delay(2000);
 }
+
+
+// QUESTION: WAP to control a motor through blutooth/..
+
+int motor = 8;
+
+void setup() {
+  pinMode(motor, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available()) {
+    char data = Serial.read();
+
+    if (data == '1')
+      digitalWrite(motor, HIGH);
+
+    if (data == '0')
+      digitalWrite(motor, LOW);
+  }
+}
