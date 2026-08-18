@@ -126,3 +126,31 @@ void loop() {
       digitalWrite(motor, LOW);
   }
 }
+
+// QUESTION: Smart Home Automation
+int light = D1;
+int fan = D2;
+int buzzer = D3;
+
+void setup() {
+  pinMode(light, OUTPUT);
+  pinMode(fan, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(light, HIGH);
+  delay(2000);
+
+  digitalWrite(fan, HIGH);
+  delay(2000);
+
+  digitalWrite(buzzer, HIGH);
+  delay(1000);
+
+  digitalWrite(buzzer, LOW);
+  digitalWrite(fan, LOW);
+  digitalWrite(light, LOW);
+
+  delay(2000);
+}
