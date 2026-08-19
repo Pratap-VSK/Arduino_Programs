@@ -1,4 +1,5 @@
 1. LED ON/OFF
+
 int led = 13;
 
 void setup() {
@@ -11,7 +12,10 @@ void loop() {
   digitalWrite(led, LOW);
   delay(1000);
 }
+
+
 2. LED Blinking
+
 int led = 13;
 
 void setup() {
@@ -24,7 +28,10 @@ void loop() {
   digitalWrite(led, LOW);
   delay(500);
 }
+
+
 3. Two LED Control
+
 int led1 = 8;
 int led2 = 9;
 
@@ -42,7 +49,10 @@ void loop() {
   digitalWrite(led2, HIGH);
   delay(1000);
 }
-4. Push Button से LED
+
+
+4. LED control through Push Button/..
+
 int button = 7;
 int led = 13;
 
@@ -57,7 +67,10 @@ void loop() {
   else
     digitalWrite(led, LOW);
 }
-5. Push Button से Buzzer
+
+
+5. Buzzer ON/OFF Using Push Button/..
+
 int button = 7;
 int buzzer = 8;
 
@@ -72,7 +85,10 @@ void loop() {
   else
     digitalWrite(buzzer, LOW);
 }
+
+
 6. Traffic Light
+
 int red = 8;
 int yellow = 9;
 int green = 10;
@@ -96,7 +112,10 @@ void loop() {
   delay(3000);
   digitalWrite(green, LOW);
 }
+
+
 7. Three LED Sequential Blinking
+
 int a = 8, b = 9, c = 10;
 
 void setup() {
@@ -118,7 +137,10 @@ void loop() {
   delay(500);
   digitalWrite(c, LOW);
 }
-8. Potentiometer से LED Brightness
+
+
+8. Control LED Brightness via Potentiometer/..
+
 int pot = A0;
 int led = 9;
 
@@ -131,7 +153,10 @@ void loop() {
   int brightness = map(value, 0, 1023, 0, 255);
   analogWrite(led, brightness);
 }
-9. Serial Monitor पर Message
+
+
+9. Print Message on Serial Monitor
+
 void setup() {
   Serial.begin(9600);
 }
@@ -140,7 +165,10 @@ void loop() {
   Serial.println("Hello IoT");
   delay(1000);
 }
-10. Serial Monitor से LED Control
+
+
+10. LED Control Serial Monitor
+
 int led = 13;
 
 void setup() {
@@ -159,8 +187,11 @@ void loop() {
       digitalWrite(led, LOW);
   }
 }
+
+
 🔹 Sensor Programs
-11. LDR से Automatic Light
+11. Automatic Light via LDR
+
 int ldr = A0;
 int led = 13;
 
@@ -176,7 +207,10 @@ void loop() {
   else
     digitalWrite(led, LOW);
 }
+
+
 12. LM35 Temperature Sensor
+
 int sensor = A0;
 
 void setup() {
@@ -194,7 +228,10 @@ void loop() {
 
   delay(1000);
 }
+
+
 13. DHT11 Temperature
+
 #include <DHT.h>
 
 #define DHTPIN 2
@@ -216,7 +253,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 14. DHT11 Humidity
+
 #include <DHT.h>
 
 #define DHTPIN 2
@@ -238,7 +278,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 15. DHT11 Temperature + Humidity
+
 #include <DHT.h>
 
 #define DHTPIN 2
@@ -263,7 +306,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 16. Ultrasonic Distance Sensor
+
 int trig = 9;
 int echo = 10;
 
@@ -290,7 +336,10 @@ void loop() {
 
   delay(500);
 }
+
+
 17. PIR Motion Sensor
+
 int pir = 2;
 int led = 13;
 
@@ -305,7 +354,10 @@ void loop() {
   else
     digitalWrite(led, LOW);
 }
+
+
 18. IR Object Detection
+
 int ir = 2;
 int led = 13;
 
@@ -320,7 +372,10 @@ void loop() {
   else
     digitalWrite(led, LOW);
 }
+
+
 19. Soil Moisture Sensor
+
 int soil = A0;
 
 void setup() {
@@ -335,7 +390,10 @@ void loop() {
 
   delay(1000);
 }
+
+
 20. Water Level Sensor
+
 int water = A0;
 int led = 13;
 
@@ -351,8 +409,11 @@ void loop() {
   else
     digitalWrite(led, LOW);
 }
+
+
 🔹 Buzzer, Motor, Relay
 21. Buzzer Alarm
+
 int buzzer = 8;
 
 void setup() {
@@ -365,7 +426,10 @@ void loop() {
   digitalWrite(buzzer, LOW);
   delay(500);
 }
+
+
 22. Ultrasonic Distance Alarm
+
 int trig = 9;
 int echo = 10;
 int buzzer = 8;
@@ -391,7 +455,10 @@ void loop() {
   else
     digitalWrite(buzzer, LOW);
 }
+
+
 23. Servo Motor Control
+
 #include <Servo.h>
 
 Servo myservo;
@@ -410,7 +477,10 @@ void loop() {
   myservo.write(180);
   delay(1000);
 }
+
+
 24. Servo 0°–180°
+
 #include <Servo.h>
 
 Servo motor;
@@ -430,7 +500,10 @@ void loop() {
     delay(15);
   }
 }
+
+
 25. DC Motor ON/OFF
+
 int motor = 8;
 
 void setup() {
@@ -444,7 +517,10 @@ void loop() {
   digitalWrite(motor, LOW);
   delay(2000);
 }
+
+
 26. DC Motor Speed Control
+
 int motor = 9;
 
 void setup() {
@@ -461,7 +537,10 @@ void loop() {
   analogWrite(motor, 255);
   delay(2000);
 }
+
+
 27. Relay ON/OFF
+
 int relay = 8;
 
 void setup() {
@@ -475,7 +554,10 @@ void loop() {
   digitalWrite(relay, LOW);
   delay(2000);
 }
+
+
 28. LDR + Relay Automatic Light
+
 int ldr = A0;
 int relay = 8;
 
@@ -491,7 +573,11 @@ void loop() {
   else
     digitalWrite(relay, LOW);
 }
+
+
 29. Temperature + Fan
+
+
 int sensor = A0;
 int fan = 8;
 
@@ -513,7 +599,10 @@ void loop() {
   Serial.println(temp);
   delay(1000);
 }
+
+
 30. Soil Moisture + Water Pump
+
 int soil = A0;
 int pump = 8;
 
@@ -529,8 +618,11 @@ void loop() {
   else
     digitalWrite(pump, LOW);
 }
+
+
 🔹 IoT / NodeMCU Programs
 31. ESP8266 Wi-Fi Connect
+
 #include <ESP8266WiFi.h>
 
 const char* ssid = "YOUR_WIFI";
@@ -567,7 +659,10 @@ void loop() {
   digitalWrite(led, LOW);
   delay(1000);
 }
-33. Wi-Fi से LED ON/OFF
+
+
+33.LED ON/OFF  via WiFi
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
@@ -602,7 +697,10 @@ void setup() {
 void loop() {
   server.handleClient();
 }
+
+
 34. IoT Temperature Monitoring
+
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
@@ -624,7 +722,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 35. IoT Humidity Monitoring
+
 #include <DHT.h>
 
 #define DHTPIN D2
@@ -645,7 +746,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 36. IoT Temperature + Humidity
+
 #include <DHT.h>
 
 #define DHTPIN D2
@@ -670,7 +774,10 @@ void loop() {
 
   delay(2000);
 }
+
+
 37. IoT Smart Home – 2 Appliances
+
 int light = D1;
 int fan = D2;
 
@@ -688,7 +795,10 @@ void loop() {
   digitalWrite(fan, LOW);
   delay(3000);
 }
+
+
 38. Automatic Street Light
+
 int ldr = A0;
 int light = D1;
 
@@ -704,7 +814,10 @@ void loop() {
   else
     digitalWrite(light, LOW);
 }
+
+
 39. Smart Irrigation
+
 int soil = A0;
 int pump = D1;
 
@@ -720,7 +833,10 @@ void loop() {
   else
     digitalWrite(pump, LOW);
 }
+
+
 40. IoT Security Alarm
+
 int pir = D2;
 int buzzer = D1;
 
@@ -735,7 +851,10 @@ void loop() {
   else
     digitalWrite(buzzer, LOW);
 }
+
+
 41. Gas Leakage Alert
+
 int gas = A0;
 int buzzer = D1;
 
@@ -757,7 +876,11 @@ void loop() {
 
   delay(500);
 }
+
+
 42. Fire Detection
+
+
 int flame = D2;
 int buzzer = D1;
 
@@ -772,7 +895,9 @@ void loop() {
   else
     digitalWrite(buzzer, LOW);
 }
+
 43. Water Level Monitoring
+
 int sensor = A0;
 
 void setup() {
@@ -787,7 +912,11 @@ void loop() {
 
   delay(1000);
 }
+
+
 44. Soil Moisture Monitoring
+
+
 int soil = A0;
 
 void setup() {
@@ -802,7 +931,11 @@ void loop() {
 
   delay(1000);
 }
+
+
 45. IoT Weather Monitoring
+
+
 #include <DHT.h>
 
 #define DHTPIN D2
@@ -827,8 +960,9 @@ void loop() {
 
   delay(2000);
 }
-🔹 RFID / Bluetooth
-46. RFID Door Lock
+
+46. RFID Door Lock 🔹 RFID / Bluetooth
+
 #include <SPI.h>
 #include <MFRC522.h>
 
@@ -860,7 +994,10 @@ void loop() {
 
   rfid.PICC_HaltA();
 }
+
+
 47. RFID Access Control
+
 #include <SPI.h>
 #include <MFRC522.h>
 
@@ -886,7 +1023,10 @@ void loop() {
 
   rfid.PICC_HaltA();
 }
-48. Bluetooth से LED Control
+
+
+48.LED Control via Bluetooth/..
+
 int led = 13;
 
 void setup() {
@@ -905,7 +1045,10 @@ void loop() {
       digitalWrite(led, LOW);
   }
 }
-49. Bluetooth से Motor Control
+
+49.Motor Control using Bluetooth
+
+
 int motor = 8;
 
 void setup() {
@@ -924,7 +1067,11 @@ void loop() {
       digitalWrite(motor, LOW);
   }
 }
+
+
 50. Smart Home Automation
+
+
 int light = D1;
 int fan = D2;
 int buzzer = D3;
